@@ -1,0 +1,21 @@
+body{
+    /*background-color: red;*/
+    padding: 10px;
+    font-family: yekan;
+    /*direction: rtl;*/
+}
+.errorlist{
+    color: red;
+    /*background-color: #00cc00;*/
+}
+@font-face {
+  font-family: yekan;
+
+  src:url('./bYekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+label{
+    /*direction: rtl;*/
+
+}
