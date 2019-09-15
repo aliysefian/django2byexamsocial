@@ -25,7 +25,7 @@ SECRET_KEY = 'd!+&yiy$%4=(a-7&6^a$oxrodx0!t9jzpo4a#bpxk*ot@5aegy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,9 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account.apps.AccountConfig'
+    'account.apps.AccountConfig',
+    'social_django',
+    'images.apps.ImagesConfig'
 ]
+AUTHENTICATION_BACKENDS=[
+    'social_core.backends.google.GoogleOAuth2'
 
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

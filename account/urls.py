@@ -22,4 +22,5 @@ urlpatterns = [
     path('register',user_register,name='register'),
     path('dashboard/',dashboard),
     path('profile/',user_profile,name='profile')
+
 ]

@@ -22,7 +22,8 @@ from account.views import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include(('account.urls', 'account'), namespace='account'))
+    path('auth/', include(('account.urls', 'account'), namespace='account')),
+    path('social-auth', include(('social_django.urls', 'social_django'), namespace='social'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

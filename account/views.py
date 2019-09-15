@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -41,9 +42,10 @@ def user_register(request):
             new_user = form.save(commit=False)
             new_user.set_password(form.cleaned_data['password'])
             new_user.save()
+            messages.success(request,'کاربر اصافه شد')
 
         else:
-            pass
+            messages.error(request,'not valid data')
 
         return render(request, 'auth/register.html', {'form': form})
     else:
